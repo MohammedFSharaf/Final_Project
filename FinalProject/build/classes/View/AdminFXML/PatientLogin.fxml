@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="620.0" prefWidth="1024.0" style="-fx-background-color: #FEFAE0;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Admin.PatientLoginController">
+   <children>
+      <AnchorPane prefHeight="620.0" prefWidth="414.0">
+         <children>
+            <ImageView fitHeight="620.0" fitWidth="462.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/login.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="416.0" prefHeight="620.0" prefWidth="608.0" stylesheets="@../../CSS/style.css">
+         <children>
+            <Label layoutX="187.0" layoutY="48.0" styleClass="welcome" text="Welcome!" textAlignment="CENTER">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+            <Button fx:id="signupBtn" layoutX="125.0" layoutY="534.0" mnemonicParsing="false" onAction="#signupBtn" prefHeight="39.0" prefWidth="126.0" styleClass="btn" text="Sign Up">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="adminLoginBtn" layoutX="309.0" layoutY="534.0" mnemonicParsing="false" onAction="#adminLoginBtn" styleClass="btn" text="Admin Login">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Label alignment="BASELINE_CENTER" layoutX="218.0" layoutY="154.0" prefHeight="42.0" prefWidth="127.0" text="User Name" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="signinPatientBtn" layoutX="233.0" layoutY="346.0" mnemonicParsing="false" onAction="#signinPatientBtn" styleClass="btn" text="Sign In" />
+            <TextField fx:id="usernamePatientTf" layoutX="188.0" layoutY="196.0" prefHeight="29.0" prefWidth="187.0" />
+            <Label alignment="BASELINE_CENTER" layoutX="218.0" layoutY="243.0" prefHeight="42.0" prefWidth="127.0" text="Password" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="passwordPatientTf" layoutX="188.0" layoutY="285.0" prefHeight="29.0" prefWidth="187.0" />
+            <Label alignment="BASELINE_CENTER" layoutX="188.0" layoutY="112.0" prefHeight="42.0" prefWidth="187.0" text="Patient Login Page" textAlignment="CENTER" textFill="#b5adad">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

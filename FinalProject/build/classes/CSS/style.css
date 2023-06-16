@@ -1,0 +1,43 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25/05/2023, 11:43:59 م
+    Author     : SCc
+*/
+TextField , PasswordField{
+    -fx-padding: 5 25 5 25;
+    -fx-border-color: #D4A373;
+    
+}
+
+.label {
+     -fx-font-family: sans-serif;
+     -fx-font-size :18;
+    -fx-font-weight : bold;
+}
+.welcome{
+     -fx-font-size :40;
+    -fx-font-weight : bold;
+}
+.btn{
+    -fx-padding: 10 25 10 25;
+    -fx-background-color: #D4A373;
+    -fx-border-radius: 10; 
+    -fx-font-size :14;
+    -fx-text-fill: white;
+    -fx-font-weight : bold;
+
+
+}
+.btn:hover{
+   -fx-background-color: #CCD5AE;
+}
+
+.radio{
+  -fx-font-family: sans-serif;
+     -fx-font-size :18;
+    -fx-font-weight : bold;  
+}

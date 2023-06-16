@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="620.0" prefWidth="1024.0" style="-fx-background-color: #e5e5e5e5;" stylesheets="@../../CSS/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Admin.PatientDashboardController">
+   <children>
+      <AnchorPane prefHeight="88.0" prefWidth="1024.0" style="-fx-background-color: #fca311;" stylesheets="@../../CSS/dashbord.css">
+         <children>
+            <Label alignment="BASELINE_CENTER" layoutX="32.0" layoutY="14.0" prefHeight="42.0" prefWidth="225.0" text="Patient Dashboard page" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="BookedWaitingAppointmentsBtn" layoutX="342.0" layoutY="43.0" mnemonicParsing="false" onAction="#BookedWaitingAppointmentsBtn" prefHeight="36.0" prefWidth="261.0" styleClass="button-select" stylesheets="@../../CSS/dashbord.css" text="Booked Waiting Appointments" />
+            <Button fx:id="LogOutBtn" layoutX="885.0" layoutY="25.0" mnemonicParsing="false" onAction="#LogOutBtn" prefHeight="36.0" prefWidth="109.0" styleClass="button-logout" text="Log Out" />
+            <Button fx:id="BookedFinishedAppointmentsBtn" layoutX="603.0" layoutY="43.0" mnemonicParsing="false" onAction="#BookedFinishedAppointmentsBtn" prefHeight="36.0" prefWidth="261.0" styleClass="button-select" stylesheets="@../../CSS/dashbord.css" text="Booked Finished Appointments" />
+            <Button fx:id="HomeBtn" layoutX="246.0" layoutY="43.0" mnemonicParsing="false" onAction="#HomeBtn" prefHeight="36.0" prefWidth="96.0" styleClass="button-select" stylesheets="@../../CSS/dashbord.css" text="Home" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="88.0" prefHeight="532.0" prefWidth="1024.0" stylesheets="@../../CSS/dashbord.css">
+         <children>
+            <Button fx:id="ShowAllBtnA" layoutX="169.0" layoutY="62.0" mnemonicParsing="false" onAction="#ShowAllBtnA" prefHeight="42.0" prefWidth="161.0" text="Show all ">
+               <styleClass>
+                  <String fx:value="search" />
+                  <String fx:value="btn" />
+               </styleClass>
+            </Button>
+            <TableView fx:id="allFreeAppointmentsTableA" layoutX="145.0" layoutY="158.0" prefHeight="360.0" prefWidth="734.0">
+               <columns>
+                  <TableColumn fx:id="idA" prefWidth="54.0" text="ID" />
+                  <TableColumn fx:id="appointmentDateA" prefWidth="207.0" text="Appointment Date" />
+                  <TableColumn fx:id="appointmentDayA" minWidth="0.0" prefWidth="183.0" text="Appointment Day" />
+                  <TableColumn fx:id="appointmentTimeA" minWidth="0.0" prefWidth="180.0" text="Appointment Time " />
+                  <TableColumn fx:id="statusA" minWidth="0.0" prefWidth="110.0" text="status " />
+               </columns>
+            </TableView>
+            <TableView fx:id="allBookedWaitingAppointmentsTableB" layoutX="335.0" layoutY="158.0" prefHeight="360.0" prefWidth="372.0" visible="false">
+               <columns>
+                  <TableColumn fx:id="idB" prefWidth="54.0" text="ID" />
+                  <TableColumn fx:id="AppointmentIdB" prefWidth="147.0" text="Appointment ID " />
+                  <TableColumn fx:id="userIdB" prefWidth="76.0" text="User ID" />
+                  <TableColumn fx:id="statusB" prefWidth="92.0" text="Status" />
+               </columns>
+            </TableView>
+            <TableView fx:id="allBookedFinishedAppointmentsTableC" layoutX="215.0" layoutY="158.0" prefHeight="360.0" prefWidth="594.0" visible="false">
+               <columns>
+                  <TableColumn fx:id="idC" prefWidth="54.0" text="ID" />
+                  <TableColumn fx:id="appointmentIdC" prefWidth="147.0" text="Appointment ID " />
+                  <TableColumn fx:id="userIdC" prefWidth="76.0" text="User ID" />
+                  <TableColumn fx:id="statusC" prefWidth="92.0" text="Status" />
+                  <TableColumn fx:id="doctorCommnetC" prefWidth="224.0" text="Doctor Commnet " />
+               </columns>
+            </TableView>
+            <Button fx:id="BookAnFreeAppointmentBtn" layoutX="395.0" layoutY="62.0" mnemonicParsing="false" onAction="#BookAnFreeAppointmentBtn" prefHeight="42.0" prefWidth="234.0" styleClass="button-createnew" text="Book An Free Appointment" />
+            <Button fx:id="ShowAllBtnB" layoutX="169.0" layoutY="62.0" mnemonicParsing="false" onAction="#ShowAllBtnB" prefHeight="42.0" prefWidth="161.0" text="Show all ">
+               <styleClass>
+                  <String fx:value="search" />
+                  <String fx:value="btn" />
+               </styleClass>
+            </Button>
+            <Button fx:id="ShowAllBtnC" layoutX="169.0" layoutY="62.0" mnemonicParsing="false" onAction="#ShowAllBtnC" prefHeight="42.0" prefWidth="161.0" text="Show all ">
+               <styleClass>
+                  <String fx:value="search" />
+                  <String fx:value="btn" />
+               </styleClass>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

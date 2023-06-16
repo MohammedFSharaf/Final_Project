@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="620.0" prefWidth="1024.0" style="-fx-background-color: #e5e5e5e5;" stylesheets="@../../CSS/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Admin.AdminDashboardController">
+   <children>
+      <AnchorPane prefHeight="88.0" prefWidth="1024.0" style="-fx-background-color: #fca311;" stylesheets="@../../CSS/dashbord.css">
+         <children>
+            <Label alignment="BASELINE_CENTER" layoutX="32.0" layoutY="14.0" prefHeight="42.0" prefWidth="220.0" text="Admin Dashboard Page" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="homeBtn" layoutX="230.0" layoutY="43.0" mnemonicParsing="false" onAction="#homeBtn" prefHeight="36.0" prefWidth="187.0" styleClass="button-select" stylesheets="@../../CSS/dashbord.css" text="Home" />
+            <Button fx:id="FreeAppointmentsBtn" layoutX="417.0" layoutY="43.0" mnemonicParsing="false" onAction="#FreeAppointmentsBtn" prefHeight="36.0" prefWidth="201.0" styleClass="button-select" stylesheets="@../../CSS/dashbord.css" text="Free Appointments" />
+            <Button fx:id="LogOutBtn" layoutX="885.0" layoutY="25.0" mnemonicParsing="false" onAction="#LogOutBtn" prefHeight="36.0" prefWidth="109.0" styleClass="button-logout" text="Log Out" />
+            <Button fx:id="BookedAppointmentsBtn" layoutX="618.0" layoutY="43.0" mnemonicParsing="false" onAction="#BookedAppointmentsBtn" prefHeight="36.0" prefWidth="201.0" styleClass="button-select" stylesheets="@../../CSS/dashbord.css" text="Booked Appointments" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="82.0" prefHeight="532.0" prefWidth="1024.0" stylesheets="@../../CSS/dashbord.css">
+         <children>
+            <Button fx:id="ShowAllBtn" layoutX="105.0" layoutY="62.0" mnemonicParsing="false" onAction="#ShowAllBtn" prefHeight="42.0" prefWidth="161.0" text="Show all ">
+               <styleClass>
+                  <String fx:value="search" />
+                  <String fx:value="btn" />
+               </styleClass>
+            </Button>
+            <Button fx:id="ShowAllBtnB" layoutX="105.0" layoutY="62.0" mnemonicParsing="false" onAction="#ShowAllBtnB" prefHeight="42.0" prefWidth="161.0" text="Show all " visible="false">
+               <styleClass>
+                  <String fx:value="search" />
+                  <String fx:value="btn" />
+               </styleClass>
+            </Button>
+            <Button fx:id="ShowAllBtnC" layoutX="105.0" layoutY="62.0" mnemonicParsing="false" onAction="#ShowAllBtnC" prefHeight="42.0" prefWidth="161.0" text="Show all " visible="false">
+               <styleClass>
+                  <String fx:value="search" />
+                  <String fx:value="btn" />
+               </styleClass>
+            </Button>
+            <HBox layoutX="364.0" layoutY="62.0" prefHeight="42.0" prefWidth="350.0">
+               <children>
+                  <TextField fx:id="searchTF" prefHeight="41.0" prefWidth="235.0" promptText="First Name" />
+                  <Button fx:id="searchFirstnameBtn" mnemonicParsing="false" onAction="#searchFirstnameBtn" prefHeight="42.0" prefWidth="114.0" text="search" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="search" />
+                        <String fx:value="btn" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox layoutX="374.0" layoutY="72.0" prefHeight="42.0" prefWidth="350.0" visible="false">
+               <children>
+                  <TextField fx:id="searchTF2" prefHeight="41.0" prefWidth="235.0" promptText="First Name" />
+                  <Button fx:id="searchFirstnameBtn2" mnemonicParsing="false" onAction="#searchFirstnameBtn2" prefHeight="42.0" prefWidth="114.0" text="search" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="search" />
+                        <String fx:value="btn" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </HBox>
+            <TableView fx:id="allregisterdpatientsTableA" layoutX="81.0" layoutY="158.0" prefHeight="360.0" prefWidth="862.0">
+               <columns>
+                  <TableColumn fx:id="idA" prefWidth="54.0" text="ID" />
+                  <TableColumn fx:id="userNameA" prefWidth="105.0" text="User Name" />
+                  <TableColumn fx:id="firstNameA" prefWidth="102.0" text="First Name" />
+                  <TableColumn fx:id="lastNameA" prefWidth="118.0" text="Last Name" />
+                  <TableColumn fx:id="ageA" prefWidth="65.0" text="Age" />
+                  <TableColumn fx:id="emailA" prefWidth="156.0" text="Email" />
+                  <TableColumn fx:id="phoneA" prefWidth="93.0" text="Phone" />
+                  <TableColumn fx:id="genderA" prefWidth="84.0" text="Gender" />
+                  <TableColumn fx:id="roleA" prefWidth="85.0" text="Role" />
+               </columns>
+            </TableView>
+            <TableView fx:id="allfreepatientsTableB" layoutX="145.0" layoutY="158.0" prefHeight="360.0" prefWidth="734.0" visible="false">
+               <columns>
+                  <TableColumn fx:id="idB" prefWidth="54.0" text="ID" />
+                  <TableColumn fx:id="appointmentDateB" prefWidth="207.0" text="Appointment Date" />
+                  <TableColumn fx:id="appointmentDayB" minWidth="0.0" prefWidth="183.0" text="Appointment Day" />
+                  <TableColumn fx:id="appointmentTimeB" minWidth="0.0" prefWidth="180.0" text="Appointment Time " />
+                  <TableColumn fx:id="statusB" minWidth="0.0" prefWidth="110.0" text="status " />
+               </columns>
+            </TableView>
+            <TableView fx:id="allbookedpatientsTableC" layoutX="99.0" layoutY="158.0" prefHeight="360.0" prefWidth="827.0" visible="false">
+               <columns>
+                  <TableColumn fx:id="idC" prefWidth="54.0" text="ID" />
+                  <TableColumn fx:id="appointmentIdC" prefWidth="146.0" text="Appointment Id" />
+                  <TableColumn fx:id="userIdC" prefWidth="76.0" text="User Id" />
+                  <TableColumn fx:id="statusC" prefWidth="127.0" text="status" />
+                  <TableColumn fx:id="doctorCommentC" prefWidth="213.0" text="Doctor Commnet " />
+                  <TableColumn fx:id="firstNameC" prefWidth="109.0" text="First Name" />
+                  <TableColumn fx:id="lastNameC" prefWidth="101.0" text="Last Name" />
+               </columns>
+            </TableView>
+            <Button fx:id="UpdateBtn" layoutX="837.0" layoutY="62.0" mnemonicParsing="false" onAction="#UpdateBtn" prefHeight="42.0" prefWidth="161.0" styleClass="button-update" text="Update" />
+            <Button fx:id="DeleteBtn" layoutX="837.0" layoutY="107.0" mnemonicParsing="false" onAction="#DeleteBtn" prefHeight="42.0" prefWidth="161.0" styleClass="button-delete" text="Delete" />
+            <Button fx:id="CreateBtn" layoutX="837.0" layoutY="14.0" mnemonicParsing="false" onAction="#CreateBtn" prefHeight="42.0" prefWidth="161.0" styleClass="button-createnew" text="Create New" />
+            <Button fx:id="CreateBtnB" layoutX="837.0" layoutY="14.0" mnemonicParsing="false" onAction="#CreateBtnB" prefHeight="42.0" prefWidth="161.0" styleClass="button-createnew" text="Create New" visible="false" />
+            <Button fx:id="UpdateBtnB" layoutX="837.0" layoutY="62.0" mnemonicParsing="false" onAction="#UpdateBtnB" prefHeight="42.0" prefWidth="161.0" styleClass="button-update" text="Update" visible="false" />
+            <Button fx:id="DeleteBtnB" layoutX="837.0" layoutY="107.0" mnemonicParsing="false" onAction="#DeleteBtnB" prefHeight="42.0" prefWidth="161.0" styleClass="button-delete" text="Delete" visible="false" />
+            <Button fx:id="UpdateBtnC" layoutX="837.0" layoutY="62.0" mnemonicParsing="false" onAction="#UpdateBtnC" prefHeight="42.0" prefWidth="161.0" styleClass="button-update" text="Add Comment" visible="false" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

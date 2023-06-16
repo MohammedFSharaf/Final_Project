@@ -1,0 +1,98 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27/05/2023, 11:47:36 م
+    Author     : SCc
+*/
+TextField{
+    -fx-padding: 5 25 5 25;
+    -fx-border-color: #14213d;
+    -fx-text-fill: #ddddd;
+    
+     
+    
+}
+.btn{
+    -fx-border-radius: 10; 
+    -fx-font-family: sans-serif;
+  -fx-text-fill: white;
+  -fx-font-weight : bold;
+  -fx-font-size :14;
+   -fx-padding: 10 25 10 25;
+}
+.btn:hover{
+   -fx-background-color: #5e5e5e;
+}
+.search{
+  -fx-background-color:#14213d;
+  
+}
+/* CSS for delete button */
+.button-delete {
+    -fx-background-color: #FF0000;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: sans-serif;
+  -fx-font-weight : bold;
+  -fx-font-size :14;
+   -fx-padding: 10 25 10 25;
+}
+
+.button-delete:hover {
+    -fx-background-color: #CC0000;
+    
+}
+
+/* CSS for update button */
+.button-update {
+    -fx-background-color: #0066CC;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: sans-serif;
+  -fx-font-weight : bold;
+  -fx-font-size :14;
+   -fx-padding: 10 25 10 25;
+}
+
+.button-update:hover {
+    -fx-background-color: #004C99;
+}
+
+.button-createnew  {
+    -fx-background-color: green;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: sans-serif;
+  -fx-font-weight : bold;
+  -fx-font-size :14;
+   -fx-padding: 10 25 10 25;
+}
+
+.button-createnew:hover {
+    -fx-background-color: #004C99;
+}
+
+.button-select{
+    -fx-background-color:  #fca311;
+    -fx-text-fill: #000000;
+    -fx-font-family: sans-serif;
+  -fx-font-weight : bold;
+  -fx-font-size :14;
+   -fx-padding: 10 25 10 25;
+}
+.button-select:hover{
+    -fx-background-color: #e5e5e5;
+}
+
+.button-logout {
+    -fx-background-color: #14213d;
+    -fx-text-fill: white;
+    -fx-font-family: sans-serif;
+  -fx-font-weight : bold;
+  -fx-font-size :14;
+   -fx-padding: 10 25 10 25;
+}
+
+.button-logout:hover {
+    -fx-background-color: #CC0000;
+}
